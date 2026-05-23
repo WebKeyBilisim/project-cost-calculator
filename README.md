@@ -6,7 +6,7 @@
 
 Because every digital project starts with a meeting, grows with scope changes, and survives with coffee.
 
-[🚀 Live Demo](#) · [💻 Source Code](#-project-structure) · [☕ Coffee Level](#-coffee-driven-logic)
+[🚀 Live Demo](https://webkeybilisim.github.io/project-cost-calculator/) · [💻 Source Code](#-project-structure) · [☕ Coffee Level](#-coffee-driven-logic)
 
 </div>
 
