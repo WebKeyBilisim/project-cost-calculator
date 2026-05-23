@@ -1,0 +1,223 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --card-light: #1f2937;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --border: rgba(255, 255, 255, 0.08);
+  --success: #22c55e;
+  --warning: #facc15;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.16), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 32%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.page {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 56px 0 32px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--accent);
+  background: rgba(245, 158, 11, 0.08);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 72px);
+  margin: 0 0 16px;
+  letter-spacing: -2px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.calculator-card,
+.result-card {
+  background: rgba(17, 24, 39, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.card-header {
+  margin-bottom: 24px;
+}
+
+.card-header h2,
+.result-card h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.card-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  gap: 18px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--card-light);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent);
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-light);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.checkbox-group input {
+  width: auto;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 16px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #111827;
+  font-size: 17px;
+  font-weight: 800;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(245, 158, 11, 0.22);
+}
+
+.result-card {
+  margin-top: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.result-grid div {
+  background: var(--card-light);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.result-grid span {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.result-grid strong {
+  font-size: 24px;
+}
+
+.business-note {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.24);
+  border-radius: 18px;
+  padding: 18px;
+  color: var(--text) !important;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 32px 0 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .checkbox-group,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-card,
+  .result-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+}
