@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Cost Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">☕ Coffee Driven Development</div>
+      <h1>Project Cost Calculator</h1>
+      <p>
+        A tiny, funny and business-friendly calculator for estimating digital project complexity.
+        Spoiler: it usually needs more coffee.
+      </p>
+    </section>
+
+    <section class="calculator-card">
+      <div class="card-header">
+        <h2>🧮 Project Complexity Check</h2>
+        <p>Select what your “small project” includes.</p>
+      </div>
+
+      <form id="calculatorForm" class="form-grid">
+        <label>
+          Number of Pages
+          <input type="number" id="pages" min="1" max="100" value="5" />
+        </label>
+
+        <label>
+          Number of API Integrations
+          <input type="number" id="apis" min="0" max="50" value="1" />
+        </label>
+
+        <label>
+          Deadline Pressure
+          <select id="deadline">
+            <option value="1">Relaxed — People are still smiling</option>
+            <option value="2">Normal — Manageable with planning</option>
+            <option value="3">Urgent — Coffee machine warming up</option>
+            <option value="4">Yesterday — Developer eyebrow raised</option>
+          </select>
+        </label>
+
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" id="adminPanel" />
+            Admin Panel
+          </label>
+
+          <label>
+            <input type="checkbox" id="userLogin" />
+            User Login
+          </label>
+
+          <label>
+            <input type="checkbox" id="payment" />
+            Payment Integration
+          </label>
+
+          <label>
+            <input type="checkbox" id="reports" />
+            Reports & Dashboards
+          </label>
+
+          <label>
+            <input type="checkbox" id="multilanguage" />
+            Multi-language Support
+          </label>
+
+          <label>
+            <input type="checkbox" id="liveStreaming" />
+            Live Streaming
+          </label>
+        </div>
+
+        <button type="submit">Calculate Project Reality ☕</button>
+      </form>
+    </section>
+
+    <section id="result" class="result-card hidden">
+      <h2 id="resultTitle"></h2>
+      <p id="resultMessage"></p>
+
+      <div class="result-grid">
+        <div>
+          <span>Complexity Score</span>
+          <strong id="scoreValue"></strong>
+        </div>
+        <div>
+          <span>Estimated Coffee</span>
+          <strong id="coffeeValue"></strong>
+        </div>
+        <div>
+          <span>Developer Mood</span>
+          <strong id="moodValue"></strong>
+        </div>
+      </div>
+
+      <p class="business-note" id="businessNote"></p>
+    </section>
+
+    <footer>
+      <p>
+        Built for fun by <strong>WebKey Bilişim Teknolojileri</strong> —
+        where every project starts with analysis and continues with coffee.
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
